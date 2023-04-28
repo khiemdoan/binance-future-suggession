@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "binance-future-suggestion"
+version = "0.1.0"
+description = "Simple script helps to choose best symbol for future trading."
+authors = ["Khiem Doan <doankhiem.crazy@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+httpx = "0.24.0"
+pandas = "2.0.1"
+pandas-ta = {git = "https://github.com/twopirllc/pandas-ta.git", rev = "development"}
+
+[tool.poetry.dev-dependencies]
+isort = "^5.12.0"
+ruff = "^0.0.263"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
