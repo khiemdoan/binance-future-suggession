@@ -8,6 +8,7 @@ import time
 
 import httpx
 import pandas as pd
+from tqdm.asyncio import tqdm_asyncio
 
 from constants import Interval
 
@@ -44,7 +45,7 @@ async def download_klines(symbols: list[str]):
             asyncio.ensure_future(get_klines(client, symbol, Interval.HOUR_1))
             for symbol in symbols
         ]
-        data_1_hour = await asyncio.gather(*tasks)
+        data_1_hour = await tqdm_asyncio.gather(*tasks)
     return data_1_day, data_1_hour
 
 

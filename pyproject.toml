@@ -10,6 +10,7 @@ python = "^3.11"
 httpx = "0.24.0"
 pandas = "2.0.1"
 pandas-ta = {git = "https://github.com/twopirllc/pandas-ta.git", rev = "development"}
+tqdm = "4.65.0"
 
 [tool.poetry.dev-dependencies]
 isort = "^5.12.0"
